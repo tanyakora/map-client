@@ -1,0 +1,1 @@
+export { default as BlindView} from './BlindView.jsx';

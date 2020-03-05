@@ -1,0 +1,76 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+         xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/maven-v4_0_0.xsd">
+    <modelVersion>4.0.0</modelVersion>
+
+    <name>MAP project parent</name>
+    <groupId>test.client.map</groupId>
+    <artifactId>map-parent</artifactId>
+    <version>1.0.0-SNAPSHOT</version>
+    <packaging>pom</packaging>
+
+    <properties>
+        <maven.compiler.source>1.8</maven.compiler.source>
+        <maven.compiler.target>1.8</maven.compiler.target>
+        <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
+
+        <javaee-api.version>7.0</javaee-api.version>
+        <hibernate.version>5.0.11.Final</hibernate.version>
+        <fasterxml.jackson.version>2.7.4</fasterxml.jackson.version>
+        <liquibase-slf4j.version>2.0.0</liquibase-slf4j.version>
+        <liquibase-hibernate5.version>3.6</liquibase-hibernate5.version>
+        <javassist.version>3.21.0-GA</javassist.version> <!-- Same as Hibernate -->
+        <validation-api.version>1.1.0.Final</validation-api.version>
+        <liquibase.version>3.5.3</liquibase.version>
+        <jboss.resteasy.version>3.0.19.Final</jboss.resteasy.version>
+        <frontend-maven-plugin.version>1.6</frontend-maven-plugin.version>
+        <node.version>v6.11.3</node.version>
+        <yarn.version>v1.1.0</yarn.version>
+    </properties>
+
+    <modules>
+        <!--<module>client</module>-->
+        <module>client</module>
+    </modules>
+
+    <build>
+        <plugins>
+            <plugin>
+                <groupId>org.apache.maven.plugins</groupId>
+                <artifactId>maven-compiler-plugin</artifactId>
+                <version>3.7.0</version>
+                <configuration>
+                    <encoding>${project.build.sourceEncoding}</encoding>
+                </configuration>
+            </plugin>
+            <plugin>
+                <groupId>org.apache.maven.plugins</groupId>
+                <artifactId>maven-resources-plugin</artifactId>
+                <version>3.0.2</version>
+                <configuration>
+                    <encoding>${project.build.sourceEncoding}</encoding>
+                </configuration>
+            </plugin>
+        </plugins>
+
+    </build>
+
+    <dependencies>
+
+        <dependency>
+            <groupId>javax</groupId>
+            <artifactId>javaee-api</artifactId>
+            <version>${javaee-api.version}</version>
+            <scope>provided</scope>
+        </dependency>
+
+        <dependency>
+            <groupId>org.slf4j</groupId>
+            <artifactId>slf4j-api</artifactId>
+            <version>1.7.22</version>
+            <scope>provided</scope>
+        </dependency>
+    </dependencies>
+
+
+</project>
